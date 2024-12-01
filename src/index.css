@@ -3,3 +3,24 @@ body {
   padding: 0;
   margin: 0;
 }
+
+/* memory styles */
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card.show {
+  background-color: var(--card-color);
+}
