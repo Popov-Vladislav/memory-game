@@ -13,6 +13,6 @@ interface Route {
 
 export const routes: Route[] = [
   { path: '/', Component: IndexPage },
-  { path: '/memory-game', Component: MemoryGamePage, title: 'Игра на трениировку памяти' },
+  { path: '/memory-game', Component: MemoryGamePage, title: 'Игра на тренировку памяти' },
   { path: '/init-data', Component: InitDataPage, title: 'Init Data' },
 ];

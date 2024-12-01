@@ -1,4 +1,4 @@
-# Telegram Mini Apps React MemoryGame
+# Telegram Mini Apps React MemoryGame.
 
 Приложение-игра для развития память на основе Telegram Mini Apps.
 
