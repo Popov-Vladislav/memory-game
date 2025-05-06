@@ -12,8 +12,11 @@ export const IndexPage: FC = () => {
           <Link to="/memory-game">
             <Cell subtitle="Проверьте свою память в нашей игре">Игра на память</Cell>
           </Link>
+          <Link to="/store">
+            <Cell subtitle="Проверьте функционал интернет магазина в ТГ">Интернет магазин</Cell>
+          </Link>
           <Link to="/init-data">
-            <Cell subtitle="User data, chat information, technical data">Init Data</Cell>
+            <Cell subtitle="Техническая информация о пользователе">О пользователе</Cell>
           </Link>
         </Section>
       </List>

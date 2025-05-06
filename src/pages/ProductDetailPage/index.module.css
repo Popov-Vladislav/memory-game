@@ -1,0 +1,106 @@
+.container {
+  padding: 15px;
+  padding-bottom: 40px;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.favoriteButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ccc;
+  font-size: 22px;
+  transition: color 0.2s ease;
+}
+
+.favoriteButton.favorite {
+  color: #ff3b5c;
+}
+
+.content {
+  margin-bottom: 80px; /* Space for fixed buttons */
+}
+
+.title {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--tg-theme-text-color);
+}
+
+.price {
+  margin: 0 0 20px 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--tg-theme-text-color);
+}
+
+.description {
+  margin-bottom: 30px;
+}
+
+.description h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.description p {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--tg-theme-text-color);
+}
+
+.actions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--tg-theme-bg-color);
+  border-top: 1px solid var(--tg-theme-hint-color);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.quantityValue {
+  min-width: 30px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+}

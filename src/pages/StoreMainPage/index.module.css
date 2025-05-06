@@ -1,0 +1,43 @@
+.storeContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 60px; /* Space for bottom navigation */
+  }
+  
+  .bottomNav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: var(--tg-theme-bg-color);
+    border-top: 1px solid var(--tg-theme-hint-color);
+    z-index: 10;
+  }
+  
+  .bottomNav button {
+    flex: 1;
+    margin: 0 5px;
+  }
+  
+  .sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+  }
+  
+  .sectionTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--tg-theme-text-color);
+  }
+  
+  .viewAll {
+    color: var(--tg-theme-link-color);
+    font-size: 14px;
+    text-decoration: none;
+  }

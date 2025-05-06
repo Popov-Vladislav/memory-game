@@ -1,0 +1,59 @@
+.cartContainer {
+  padding: 15px;
+  padding-bottom: 150px;
+}
+
+.title {
+  margin: 0 0 15px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.emptyCart p {
+  margin-bottom: 20px;
+  color: var(--tg-theme-hint-color);
+}
+
+.summary {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--tg-theme-bg-color);
+  border-top: 1px solid var(--tg-theme-hint-color);
+  padding: 15px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.total {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 10px 0 15px;
+}
+
+.addressInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--tg-theme-hint-color);
+  border-radius: 8px;
+  background-color: var(--tg-theme-bg-color);
+  color: var(--tg-theme-text-color);
+  resize: none;
+  font-family: inherit;
+  font-size: 16px;
+}
