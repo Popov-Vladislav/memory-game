@@ -78,6 +78,7 @@ export const StoreCartPage: FC = () => {
               <Section header="Способ доставки">
                 {deliveryOptions.map(option => (
                   <Cell
+                    Component="label"
                     key={option.id}
                     after={
                       <Radio 
@@ -94,20 +95,21 @@ export const StoreCartPage: FC = () => {
 
               {selectedDeliveryOption && selectedDeliveryOption.id !== 3 && (
                 <Section header="Адрес доставки">
-                  <Cell multiline>
+                  <div className={styles.addressWrapper}>
                     <textarea
-                      className={styles.addressInput}
-                      placeholder="Введите адрес доставки"
-                      value={address}
-                      onChange={(e) => setAddress(e.target.value)}
-                      rows={3}
-                    />
-                  </Cell>
+                        className={styles.addressInput}
+                        placeholder="Введите адрес доставки"
+                        value={address}
+                        onChange={(e) => setAddress(e.target.value)}
+                        rows={3}
+                      />
+                  </div>
                 </Section>
               )}
 
               <Section header="Способ оплаты">
                 <Cell
+                  Component="label"
                   after={
                     <Radio 
                       checked={paymentMethod === 'card'}
@@ -118,6 +120,7 @@ export const StoreCartPage: FC = () => {
                   Банковская карта
                 </Cell>
                 <Cell
+                  Component="label"
                   after={
                     <Radio 
                       checked={paymentMethod === 'cash'}

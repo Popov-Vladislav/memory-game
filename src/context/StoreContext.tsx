@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode, FC } from 'react';
+import { createContext, useContext, useState, ReactNode, FC, useCallback } from 'react';
 import { Product, CartItem, DeliveryOption } from '@/types/store';
 
 interface StoreContextType {
@@ -10,7 +10,10 @@ interface StoreContextType {
   clearCart: () => void;
   toggleFavorite: (product: Product) => void;
   isInFavorites: (productId: number) => boolean;
+  isInCart: (productId: number) => boolean;
+  getCartItemQuantity: (productId: number) => number;
   cartTotal: number;
+  cartItemsCount: number;
   deliveryOptions: DeliveryOption[];
   selectedDeliveryOption: DeliveryOption | null;
   setSelectedDeliveryOption: (option: DeliveryOption | null) => void;
@@ -85,11 +88,25 @@ export const StoreProvider: FC<{ children: ReactNode }> = ({ children }) => {
     return favorites.some(item => item.id === productId);
   };
 
+  const isInCart = useCallback((productId: number) => {
+    return cart.some(item => item.product.id === productId);
+  }, [cart]);
+
+  const getCartItemQuantity = useCallback((productId: number) => {
+    const item = cart.find(item => item.product.id === productId);
+    return item ? item.quantity : 0;
+  }, [cart]);
+
   // Calculate cart total (including delivery if selected)
   const cartTotal = cart.reduce(
     (total, item) => total + item.product.price * item.quantity, 
     0
   ) + (selectedDeliveryOption?.price || 0);
+
+  const cartItemsCount = cart.reduce(
+    (total, item) => total + item.quantity, 
+    0
+  );
 
   const value = {
     cart,
@@ -100,7 +117,10 @@ export const StoreProvider: FC<{ children: ReactNode }> = ({ children }) => {
     clearCart,
     toggleFavorite,
     isInFavorites,
+    isInCart,
+    getCartItemQuantity,
     cartTotal,
+    cartItemsCount,
     deliveryOptions,
     selectedDeliveryOption,
     setSelectedDeliveryOption

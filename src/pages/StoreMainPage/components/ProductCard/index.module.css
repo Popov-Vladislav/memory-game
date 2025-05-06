@@ -75,3 +75,19 @@
   font-size: 18px;
   margin: 0 0 12px 0;
 }
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.quantityValue {
+  min-width: 30px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--tg-theme-text-color);
+}

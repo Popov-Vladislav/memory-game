@@ -46,6 +46,11 @@
   margin: 10px 0 15px;
 }
 
+.addressWrapper {
+  display: flex;
+  padding: 0.5rem;
+}
+
 .addressInput {
   width: 100%;
   padding: 10px;
