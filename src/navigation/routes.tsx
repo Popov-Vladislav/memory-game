@@ -1,5 +1,3 @@
-import type { ComponentType, JSX } from 'react';
-
 import { IndexPage } from '@/pages/IndexPage/IndexPage';
 import { InitDataPage } from '@/pages/InitDataPage';
 import { MemoryGamePage } from '@/pages/MemoryGamePage/MemoryGamePage';

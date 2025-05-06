@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { Button, Cell, List, Section, TabsList } from '@telegram-apps/telegram-ui';
+import { Button, TabsList } from '@telegram-apps/telegram-ui';
 import { useNavigate } from 'react-router-dom';
 
 import { Page } from '@/components/Page';

@@ -1,4 +1,4 @@
-import { ComponentType, JSX } from "react";
+import { ComponentType } from "react";
 
 export interface Route {
   path: string;

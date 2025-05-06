@@ -56,7 +56,6 @@ export const CartItem: FC<CartItemProps> = ({ item }) => {
           
           <Button 
             size="s"
-            appearance="negative"
             onClick={handleRemove}
           >
             Удалить
